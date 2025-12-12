@@ -32,3 +32,6 @@ export function formatDate(dateString: string) {
 
   return { weekday, date: `${day} ${month} ${year}` };
 }
+
+export const getRandom = (arr: string[]) =>
+  arr[Math.floor(Math.random() * arr.length)];

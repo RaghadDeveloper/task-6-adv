@@ -1,6 +1,6 @@
 import { GoArrowUpRight } from "react-icons/go";
 import type { Blog } from "../interfaces";
-import { formatDate } from "../utils/helpers";
+import { formatDate, getRandom } from "../utils/helpers";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
@@ -15,9 +15,6 @@ const colors = [
   "bg-orange-100 text-orange-700",
   "bg-teal-100 text-teal-700",
 ];
-
-const getRandom = (arr: string[]) =>
-  arr[Math.floor(Math.random() * arr.length)];
 
 const BlogCard = ({ blog, className }: { blog: Blog; className?: string }) => {
   const navigate = useNavigate();

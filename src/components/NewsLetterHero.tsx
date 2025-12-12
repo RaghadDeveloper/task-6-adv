@@ -1,6 +1,6 @@
-const NewsLetterHero = () => {
+const NewsLetterHero = ({ className }: { className: string }) => {
   return (
-    <div>
+    <div className={className}>
       <h2 className="text-violet-600 font-semibold text-center mb-3">
         Newlatters
       </h2>

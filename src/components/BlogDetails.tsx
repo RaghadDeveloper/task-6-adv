@@ -1,6 +1,18 @@
 import { useParams } from "react-router-dom";
 import { blogs } from "../data/blogs";
-import { formatDate } from "../utils/helpers";
+import { formatDate, getRandom } from "../utils/helpers";
+
+const colors = [
+  "bg-red-100 text-red-700",
+  "bg-blue-100 text-blue-700",
+  "bg-green-100 text-green-700",
+  "bg-yellow-100 text-yellow-700",
+  "bg-purple-100 text-purple-700",
+  "bg-pink-100 text-pink-700",
+  "bg-indigo-100 text-indigo-700",
+  "bg-orange-100 text-orange-700",
+  "bg-teal-100 text-teal-700",
+];
 
 const BlogDetails = () => {
   const { id } = useParams();
@@ -19,7 +31,7 @@ const BlogDetails = () => {
 
       <img src={blog?.image} alt="" className="mb-8 aspect-video object-top" />
 
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-3 mb-8">
         {blog?.sections.map((section, index) => (
           <div className="flex flex-col gap-3" key={index}>
             {section.title && (
@@ -40,7 +52,11 @@ const BlogDetails = () => {
 
             {section.img && (
               <div>
-                <img src={section.img.src} alt="" className="mb-3 w-full" />
+                <img
+                  src={section.img.src}
+                  alt=""
+                  className="mb-3 w-full aspect-video"
+                />
                 <p className="text-slate-500 dark:text-slate-300 text-center">
                   {section.img.desc}
                 </p>
@@ -77,7 +93,11 @@ const BlogDetails = () => {
 
                   {sec.img && (
                     <div>
-                      <img src={sec.img.src} alt="" className="mb-3" />
+                      <img
+                        src={sec.img.src}
+                        alt=""
+                        className="mb-3 max-h-100 w-full"
+                      />
                       <p className="text-slate-500 dark:text-slate-300 text-center">
                         {sec.img.desc}
                       </p>
@@ -86,6 +106,17 @@ const BlogDetails = () => {
                 </div>
               ))}
           </div>
+        ))}
+      </div>
+
+      <div className="flex gap-2">
+        {blog.categories.map((category) => (
+          <span
+            key={category}
+            className={`px-2.5 py-0.5 rounded-2xl ${getRandom(colors)}`}
+          >
+            {category}
+          </span>
         ))}
       </div>
     </div>
