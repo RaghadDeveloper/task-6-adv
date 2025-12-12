@@ -1,9 +1,9 @@
 const NewsLetterHero = () => {
   return (
     <div>
-      <h1 className="text-violet-600 font-semibold text-center mb-3">
+      <h2 className="text-violet-600 font-semibold text-center mb-3">
         Newlatters
-      </h1>
+      </h2>
       <h2 className="text-5xl font-semibold mb-6 sm:text-center">
         Stories and interviews
       </h2>
