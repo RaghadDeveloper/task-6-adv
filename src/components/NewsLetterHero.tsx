@@ -7,7 +7,7 @@ const NewsLetterHero = () => {
       <h2 className="text-5xl font-semibold mb-6 sm:text-center">
         Stories and interviews
       </h2>
-      <p className="text-xl text-slate-500 mb-10 sm:text-center">
+      <p className="text-xl text-slate-500 dark:text-slate-300 mb-10 sm:text-center">
         Subscribe to learn about new product features, the latest in technology,
         solutions, and updates.
       </p>
@@ -23,7 +23,7 @@ const NewsLetterHero = () => {
             Subscribe
           </button>
         </form>
-        <p className="text-slate-500 block">
+        <p className="text-slate-500 dark:text-slate-300 block">
           We care about your data in our{" "}
           <a href="/" className="border-b">
             privacy policy

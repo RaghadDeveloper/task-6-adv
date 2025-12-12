@@ -23,14 +23,14 @@ const BlogDetails = () => {
         {blog?.sections.map((section, index) => (
           <div className="flex flex-col gap-3" key={index}>
             {section.title && (
-              <h3 className="text-slate-500 font-bold text-lg">
+              <h3 className="text-slate-500 dark:text-slate-300 font-bold text-lg">
                 {section.title}
               </h3>
             )}
 
             {section?.description?.length &&
               section?.description?.map((desc) => (
-                <p className="text-slate-500" key={desc.p}>
+                <p className="text-slate-500 dark:text-slate-300" key={desc.p}>
                   {desc?.subTitle && (
                     <span className="font-bold">{desc.subTitle}</span>
                   )}{" "}
@@ -41,7 +41,9 @@ const BlogDetails = () => {
             {section.img && (
               <div>
                 <img src={section.img.src} alt="" className="mb-3 w-full" />
-                <p className="text-slate-500 text-center">{section.img.desc}</p>
+                <p className="text-slate-500 dark:text-slate-300 text-center">
+                  {section.img.desc}
+                </p>
               </div>
             )}
 
@@ -49,17 +51,22 @@ const BlogDetails = () => {
               section.secs.map((sec, index) => (
                 <div key={index} className="flex flex-col gap-3">
                   {sec.subTitle && (
-                    <h4 className="text-slate-500 font-bold">{sec.subTitle}</h4>
+                    <h4 className="text-slate-500 dark:text-slate-300 font-bold">
+                      {sec.subTitle}
+                    </h4>
                   )}
                   {sec.description.length &&
                     sec.description.map((desc, index) => (
-                      <p className="text-slate-500" key={index}>
+                      <p
+                        className="text-slate-500 dark:text-slate-300"
+                        key={index}
+                      >
                         {desc.p}
                       </p>
                     ))}
 
                   {sec.ul?.length && (
-                    <ul className="text-slate-500">
+                    <ul className="text-slate-500 dark:text-slate-300">
                       {sec.ul.map((item, index) => (
                         <li key={index} className="list-disc ml-7">
                           {item}
@@ -71,7 +78,7 @@ const BlogDetails = () => {
                   {sec.img && (
                     <div>
                       <img src={sec.img.src} alt="" className="mb-3" />
-                      <p className="text-slate-500 text-center">
+                      <p className="text-slate-500 dark:text-slate-300 text-center">
                         {sec.img.desc}
                       </p>
                     </div>

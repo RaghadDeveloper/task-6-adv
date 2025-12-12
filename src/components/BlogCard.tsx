@@ -37,7 +37,7 @@ const BlogCard = ({ blog, className }: { blog: Blog; className?: string }) => {
             <GoArrowUpRight />
           </span>
         </div>
-        <p className="mb-6 text-slate-500">
+        <p className="mb-6 text-slate-500 dark:text-slate-300">
           {blog.description.split(" ").slice(0, 18).join(" ")}
         </p>
 

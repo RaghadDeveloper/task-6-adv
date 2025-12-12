@@ -2,6 +2,7 @@ import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { MdMenu } from "react-icons/md";
 import { NavLink } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -21,9 +22,10 @@ const Navbar = () => {
             <NavLink to="/" className="text-xl p-2">
               About
             </NavLink>
-            <NavLink to="/" className="text-xl p-2">
+            <NavLink to="/newsletter" className="text-xl p-2">
               Newsletter
             </NavLink>
+            <ThemeToggle />
           </div>
 
           <span
@@ -52,9 +54,10 @@ const Navbar = () => {
             <NavLink to="/" className="text-xl p-2">
               About
             </NavLink>
-            <NavLink to="/" className="text-xl p-2">
+            <NavLink to="/newsletter" className="text-xl p-2">
               Newsletter
             </NavLink>
+            <ThemeToggle />
           </div>
         </>
       )}
