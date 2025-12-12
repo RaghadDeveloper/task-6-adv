@@ -7,8 +7,7 @@ const Home = () => {
     (state: { blogs: { blogs: Array<Blog> } }) => state?.blogs
   );
 
-  const recentBlog = blogs.slice(0, 4);
-  console.log("recentBlog", recentBlog);
+  const recentBlog = blogs.slice(blogs.length - 4, blogs.length);
 
   return (
     <div>
@@ -32,6 +31,13 @@ const Home = () => {
             <BlogCard key={blog.id} blog={blog} className="sm:flex-row" />
           )
         )}
+      </div>
+
+      <h2 className="mb-8 font-semibold text-2xl">All blog posts</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 mb-6">
+        {blogs.map((blog) => (
+          <BlogCard key={blog.id} blog={blog} />
+        ))}
       </div>
     </div>
   );
