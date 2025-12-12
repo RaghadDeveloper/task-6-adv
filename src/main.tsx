@@ -7,6 +7,7 @@ import store from "./redux/store";
 import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import NewsLetter from "./pages/NewsLetter";
+import Blog from "./pages/Blog";
 
 const router = createBrowserRouter([
   {
@@ -18,8 +19,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/blog",
-        element: <p>Blog page</p>,
+        path: "/blog/:id",
+        element: <Blog />,
       },
       {
         path: "/newsletter",

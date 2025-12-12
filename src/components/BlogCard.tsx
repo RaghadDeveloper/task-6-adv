@@ -26,7 +26,7 @@ const BlogCard = ({ blog, className }: { blog: Blog; className?: string }) => {
       />
       <div className="h-fit">
         <p className="font-semibold text-violet-700 mb-3">
-          {formatDate(blog.data).weekday} , {formatDate(blog.data).date}
+          {formatDate(blog.date).weekday} , {formatDate(blog.date).date}
         </p>
         <div className="flex justify-between gap-3 mb-3 text-2xl">
           <h3 className="font-semibold">{blog.title}</h3>
